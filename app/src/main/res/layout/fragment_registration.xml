@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_main_color">
@@ -10,8 +11,9 @@
         android:id="@+id/iv_register_frag"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/bmw"
+        app:layout_constraintBottom_toTopOf="@+id/tv_register_frag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,29 +23,29 @@
         android:id="@+id/tv_register_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/registration"
         android:textColor="@color/text_color_primary"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_facebook_register_frag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_register_frag" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_facebook_register_frag"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:background="@drawable/button_shape_secondary"
         android:foregroundTint="@color/button_shape_secondary"
         android:text="@string/facebook"
         android:textAllCaps="false"
+        android:layout_marginBottom="8dp"
         android:textColor="@color/text_color_primary"
+        app:layout_constraintBottom_toTopOf="@+id/tv_or_register_frag"
         app:layout_constraintEnd_toStartOf="@+id/btn_google_login_frag"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_register_frag" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
@@ -65,13 +67,12 @@
         android:id="@+id/tv_or_register_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/or"
         android:textColor="@color/text_color_secondary"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_email_layout_register_frag"
         app:layout_constraintEnd_toEndOf="@+id/btn_google_login_frag"
-        app:layout_constraintStart_toStartOf="@+id/btn_facebook_register_frag"
-        app:layout_constraintTop_toBottomOf="@+id/btn_facebook_register_frag" />
+        app:layout_constraintStart_toStartOf="@+id/btn_facebook_register_frag" />
 
     <View
         android:id="@+id/view"
@@ -103,9 +104,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_password_layout_register_frag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_or_register_frag"
         app:neumorph_lightSource="leftTop"
         app:neumorph_shadowColorDark="@color/shadow_dark"
         app:neumorph_shadowColorLight="@color/shadow_light"
@@ -135,9 +136,9 @@
         style="@style/Widget.Neumorph.CardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cv_confirm_password_layout_register_frag"
         app:layout_constraintEnd_toEndOf="@+id/cv_email_layout_register_frag"
         app:layout_constraintStart_toStartOf="@+id/cv_email_layout_register_frag"
-        app:layout_constraintTop_toBottomOf="@+id/cv_email_layout_register_frag"
         app:neumorph_lightSource="leftTop"
         app:neumorph_shadowColorDark="@color/shadow_dark"
         app:neumorph_shadowColorLight="@color/shadow_light"
@@ -167,10 +168,11 @@
         style="@style/Widget.Neumorph.CardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register_register_frag"
         app:layout_constraintEnd_toEndOf="@+id/cv_email_layout_register_frag"
         app:layout_constraintStart_toStartOf="@+id/cv_email_layout_register_frag"
-        app:layout_constraintTop_toBottomOf="@+id/cv_password_layout_register_frag"
         app:neumorph_lightSource="leftTop"
+        android:layout_marginBottom="16dp"
         app:neumorph_shadowColorDark="@color/shadow_dark"
         app:neumorph_shadowColorLight="@color/shadow_light"
         app:neumorph_shadowElevation="2dp"
@@ -203,29 +205,29 @@
         android:textAllCaps="false"
         android:textColor="@color/text_color_primary"
         android:textSize="20sp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/cv_confirm_password_layout_register_frag"
-        app:layout_constraintTop_toBottomOf="@+id/cv_confirm_password_layout_register_frag" />
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_log_in_register_frag"
+        app:layout_constraintEnd_toEndOf="@+id/cv_confirm_password_layout_register_frag" />
 
 
     <TextView
         android:id="@+id/tv_log_in_register_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="@string/log_in"
         android:textColor="@color/button_shape_secondary"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_skip_register_frag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_register_register_frag" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
         android:id="@+id/tv_skip_register_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/skip"
         android:textColor="@color/text_color_primary"
         android:textSize="20sp"
