@@ -23,11 +23,7 @@ object Utils {
         stackName: String
     ) {
         parentFragmentManager.beginTransaction()
-            .setCustomAnimations(
-                R.anim.fade_in,
-                R.anim.fade_out
-            )
-            .add(
+            .replace(
                 R.id.fl_main_container,
                 fragment
             ).addToBackStack(stackName).commit()
@@ -51,8 +47,7 @@ object Utils {
 
     fun toStartFragment(parentFragmentManager: FragmentManager) {
         parentFragmentManager.beginTransaction()
-
-            .add(
+            .replace(
                 R.id.fl_main_container,
                 StartFragment()
             ).commit()
